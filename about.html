@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tarak Eswar</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.waves.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Raleway', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        #vanta-background {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: -1;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 50px;
+            z-index: 10;
+        }
+
+        .nav-button {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 300;
+            padding: 8px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: all 0.5s;
+        }
+
+        .nav-button:hover::before {
+            left: 100%;
+        }
+
+        .nav-button:hover {
+            opacity: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            max-width: 800px;
+            line-height: 1.5;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="vanta-background"></div>
+    <nav class="navbar">
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="about.html" class="nav-button">About</a>
+        <a href="education.html" class="nav-button">Education</a>
+        <a href="projects.html" class="nav-button">Projects</a>
+        <a href="certifications.html" class="nav-button">Certifications</a>
+        <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+
+    <div class="content">
+        <h1>About Me</h1>
+        <p>
+            My name is <strong>Tarak Eswar</strong>, and I am a graduate of <strong>Andhra University</strong> in Visakhapatnam. 
+            With a strong foundation in programming languages such as <strong>C</strong>, <strong>Java</strong>, and <strong>Python</strong>, 
+            I have also honed my skills in web development using <strong>HTML</strong> and <strong>CSS</strong>. 
+            My expertise extends to cloud computing, particularly with <strong>AWS</strong>, 
+            and I am proficient in data analysis using tools like <strong>Weka</strong> and <strong>Oracle DB</strong>. 
+            I actively participated in clubs like <strong>EduMoon</strong> and <strong>AU United</strong>, which enriched my collaborative and leadership skills. 
+            Currently, I am completing an internship at <strong>ENH Isecure</strong> in Hyderabad, where I am gaining valuable industry experience.
+        </p>
+    </div>
+
+    <script>
+        VANTA.WAVES({
+            el: "#vanta-background",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x23153c,
+            shininess: 35.00,
+            waveHeight: 15.50,
+            waveSpeed: 0.75,
+            zoom: 0.65
+        });
+    </script>
+</body>
+</html>
